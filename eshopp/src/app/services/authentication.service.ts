@@ -7,6 +7,7 @@ import { from } from 'rxjs';
 })
 export class AuthenticationService {
 
+
   constructor(private auth: Auth) { }
 
   login(email: string, password: string) {
