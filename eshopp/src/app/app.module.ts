@@ -6,8 +6,14 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import {FormsModule} from '@angular/forms';
 import { FirstpageComponent } from './firstpage/firstpage.component'
+import { CommonModule } from '@angular/common';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatToolbar } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormField } from '@angular/material/form-field';
+import { MatInput } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -21,10 +27,18 @@ import { FirstpageComponent } from './firstpage/firstpage.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CommonModule,
     ReactiveFormsModule,
-    FormsModule
+    MatToolbar,
+    MatIconModule,
+    MatButtonModule,
+    MatFormField,
+    MatInput
+
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
