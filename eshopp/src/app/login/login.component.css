@@ -26,9 +26,6 @@
       100% { opacity: 1; }
     }
 
-    .content {
-      padding: 32px;
-    }
 
     .form-container mat-form-field{
       width: 100%;

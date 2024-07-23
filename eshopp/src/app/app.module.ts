@@ -17,6 +17,7 @@ import { MatInput } from '@angular/material/input';
 import { MatError, } from '@angular/material/form-field';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -37,8 +38,9 @@ import { getAuth, provideAuth } from '@angular/fire/auth';
     MatButtonModule,
     MatFormField,
     MatInput,
-    MatError
-
+    MatError,
+    MatSnackBarModule,
+    
   ],
   providers: [
     provideAnimationsAsync(),
