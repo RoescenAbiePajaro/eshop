@@ -14,6 +14,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormField } from '@angular/material/form-field';
 import { MatInput } from '@angular/material/input';
+import { MatError, } from '@angular/material/form-field';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { getAuth, provideAuth } from '@angular/fire/auth';
 
 @NgModule({
   declarations: [
@@ -33,11 +36,14 @@ import { MatInput } from '@angular/material/input';
     MatIconModule,
     MatButtonModule,
     MatFormField,
-    MatInput
+    MatInput,
+    MatError
 
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    provideFirebaseApp(() => initializeApp({"projectId":"eshopp-6e32f","appId":"1:1030596705094:web:77d4386a13b1d5606cc347","storageBucket":"eshopp-6e32f.appspot.com","apiKey":"AIzaSyABDukF0bP9f7fvwvWyOESiVTvOulNtJR0","authDomain":"eshopp-6e32f.firebaseapp.com","messagingSenderId":"1030596705094"})),
+    provideAuth(() => getAuth())
   ],
   bootstrap: [AppComponent]
 })
