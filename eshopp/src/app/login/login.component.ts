@@ -56,6 +56,7 @@ export class LoginComponent implements OnInit {
         this.snackBar.open('Login failed. Please try again.', 'Close', { duration: 3000 });
         console.error('Login error:', error);
       }
+      
     });
   }
 }
