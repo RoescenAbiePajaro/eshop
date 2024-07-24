@@ -19,6 +19,8 @@ import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ProductListComponent } from './product-list/product-list.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     DashboardComponent,
     FirstpageComponent,
     NavbarComponent,
+    ProductListComponent,
     
   ],
   imports: [
@@ -42,6 +45,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     MatInput,
     MatError,
     MatSnackBarModule,
+    FormsModule,
     
   ],
   providers: [
